@@ -8,54 +8,53 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="كيف ألعب" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess the word in 6 tries. After each guess, the color of the tiles will
-        change to show how close your guess was to the word.
+      خمن الكلمة في 6 محاولات. بعد كل تخمين ، لون المربع سوف
+يغيير ويظهر لك مدى قرب تخمينك من الكلمة.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="W"
+          value="م"
           status="correct"
         />
-        <Cell value="E" />
-        <Cell value="A" />
-        <Cell value="R" />
-        <Cell value="Y" />
+        <Cell value="ر" />
+        <Cell value="ح" />
+        <Cell value="ب" />
+        <Cell value="ا" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter W is in the word and in the correct spot.
+      الحرف (م) موجود في الكلمة وفي المكان الصحيح.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
-        <Cell value="I" />
+        <Cell value="ت" />
+        <Cell value="خ" />
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="L"
+          value="م"
           status="present"
         />
-        <Cell value="O" />
-        <Cell value="T" />
+        <Cell value="ي" />
+        <Cell value="ن" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter L is in the word but in the wrong spot.
+      الحرف (م) موجود في الكلمة ولكن في المكان الخطأ.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
-        <Cell value="G" />
-        <Cell isRevealing={true} isCompleted={true} value="U" status="absent" />
-        <Cell value="E" />
+        <Cell value="م" />
+        <Cell value="ح" />
+        <Cell value="ا" />
+        <Cell isRevealing={true} isCompleted={true} value="م" status="absent" />
+        <Cell value="ي" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter U is not in the word in any spot.
-      </p>
+      الحرف (م) ليس في الكلمة ابدا.      </p>
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
         This is an open source version of the word guessing game we all know and

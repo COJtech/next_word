@@ -52,9 +52,25 @@ export const Keyboard = ({
   }, [onEnter, onDelete, onChar])
 
   return (
+    
+    
     <div>
+<div className="flex justify-center mb-1">
+        {[ 'أ', 'إ', 'ئ', 'ؤ','ء'].map((key) => (
+          <Key
+            value={key}
+            key={key}
+            onClick={onClick}
+            status={charStatuses[key]}
+            isRevealing={isRevealing}
+          />
+        ))}
+      </div>
+      
+      
+      
       <div className="flex justify-center mb-1">
-        {['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((key) => (
+        {['ج', 'ح', 'خ', 'ه', 'ع', 'غ', 'ف', 'ق', 'ث', 'ص','ض'].map((key) => (
           <Key
             value={key}
             key={key}
@@ -65,7 +81,7 @@ export const Keyboard = ({
         ))}
       </div>
       <div className="flex justify-center mb-1">
-        {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map((key) => (
+        {['ط', 'ك', 'م', 'ن', 'ت', 'ا', 'ل', 'ب', 'ي','س','ش'].map((key) => (
           <Key
             value={key}
             key={key}
@@ -75,11 +91,11 @@ export const Keyboard = ({
           />
         ))}
       </div>
-      <div className="flex justify-center">
-        <Key width={65.4} value="ENTER" onClick={onClick}>
+      <div className="flex justify-center ">
+        <Key   width={70}  value="ENTER" onClick={onClick}>
           {ENTER_TEXT}
         </Key>
-        {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
+        {[ 'د', 'ظ', 'ز', 'و', 'ة','ى','ر','ذ'].map((key) => (
           <Key
             value={key}
             key={key}
@@ -88,10 +104,13 @@ export const Keyboard = ({
             isRevealing={isRevealing}
           />
         ))}
-        <Key width={65.4} value="DELETE" onClick={onClick}>
+        <Key width={50}  value="DELETE" onClick={onClick}>
           {DELETE_TEXT}
+        
         </Key>
       </div>
+      
+      
     </div>
   )
 }
